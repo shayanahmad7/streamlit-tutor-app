@@ -1,79 +1,106 @@
-# ChatGPT-like Chat App Using Assistants API
+AI Tutor for Computer Networking
 
-This project is a Streamlit-based web application that leverages OpenAI's Assistants API to provide a ChatGPT-like experience. Users can have real-time conversations with the AI, upload documents to be used as context, and even scrape and convert website content to PDFs to enrich the AI's knowledge base.
+<!-- Optional: Add a logo if you have one -->
+Overview
 
-OpenAI Assistants API - https://platform.openai.com/docs/assistants/overview
+The AI Tutor for Computer Networking is an intelligent, interactive tool designed to help students navigate through the renowned textbook "Computer Networking: A Top-Down Approach" by James Kurose and Keith Ross. This app not only provides access to the textbook itself but also offers an AI-powered tutor that can answer questions, clarify concepts, and guide students through the complexities of computer networking.
 
-## Features
+Unlike generic AI models, this AI Tutor is enhanced with a custom assistant that has a working memory of the textbook. This feature enables the AI to provide more relevant, context-aware responses that are directly tied to the content of the book.
+Features
 
-- **Real-time AI Chat:** Engage in conversations with the AI using OpenAI's GPT models, with the ability to reference uploaded documents.
-- **Web Scraping:** Extract text from provided URLs to gather information.
-- **PDF Conversion:** Convert scraped text content or any textual data into PDF files.
-- **File Upload and Management:** Upload and manage PDF files within the app, which the AI can use as context for the conversations.
-- **Contextual Responses:** The AI uses the content of uploaded files to provide informed responses.
-- **Citations and References:** The AI includes citations and references to the uploaded documents in its responses, enhancing the reliability of the information provided.
+    Interactive PDF Viewer: Students can read the "Computer Networking: A Top-Down Approach" textbook directly within the app.
+    AI-Powered Tutor: A custom assistant built using OpenAI's Assistants API, capable of answering questions related to the textbook with context-aware responses.
+    Working Memory: The AI retains a memory of the book’s content, enabling it to reference specific sections and provide detailed explanations tailored to the user's query.
+    User-Friendly Interface: The app is designed with simplicity in mind, offering an intuitive interface where students can easily switch between reading and asking questions.
 
-## OpenAI's Assistants API
+How It Works
 
-The Assistants API from OpenAI is a powerful tool that allows developers to integrate conversational AI into their applications. In this app, the Assistants API is used to:
+    Read the Textbook: The app features an embedded PDF viewer that allows you to read "Computer Networking: A Top-Down Approach" by James Kurose and Keith Ross.
+    Ask Questions: If you encounter any difficulties or need clarification, you can ask the AI tutor questions related to the content of the textbook.
+    Custom AI Responses: The AI tutor leverages its working memory of the textbook to provide accurate, contextually relevant answers, helping you better understand complex topics.
+    Continuous Learning: The AI can guide you through exercises, help with difficult concepts, and offer insights that are directly aligned with the material in the textbook.
 
-- **Generate Conversations:** Create interactive dialogues with the AI based on the user's prompts.
-- **Contextual Understanding:** Utilize the content of uploaded PDFs as context to inform the AI's responses, ensuring that the conversation is relevant and informed by the provided material.
-- **File Handling:** Upload and associate files with the AI assistant to be used during conversations.
-- **Citations:** Automatically generate citations from the uploaded files when referenced in the AI's responses, allowing for clear sourcing of information.
+Installation
+Prerequisites
 
-## Requirements
+    Python 3.7 or later
+    Git
+    A GitHub account
+    A Streamlit account for deployment (if deploying on Streamlit Cloud)
 
-- Python 3.6 or higher
-- Streamlit
-- OpenAI Python package
-- Requests library
-- BeautifulSoup library (for web scraping)
-- PDFKit library (for PDF conversion)
-- wkhtmltopdf (PDFKit dependency)
+Clone the Repository
 
-## Setup Instructions
+```bash
+git clone https://github.com/shayanahmad7/streamlit-tutor-app.git
+cd streamlit-tutor-app
+```
+Install Dependencies
 
-1. **Install Dependencies:**
+Make sure you have the necessary dependencies installed. You can do this using pip:
 
-    ```bash
-    pip install streamlit openai requests beautifulsoup4 pdfkit
-    ```
+```bash
+pip install -r requirements.txt
+```
+Running the App Locally
 
-2. **API Key Configuration:**
+To run the Streamlit app locally, use the following command:
 
-    Securely input your OpenAI API key into the Streamlit app's sidebar to authenticate your API requests.
+```bash
+streamlit run app.py
+```
 
-3. **wkhtmltopdf Installation:**
+This will start a local server where you can interact with the AI Tutor.
+Deploying on Streamlit Cloud
 
-    Ensure that `wkhtmltopdf` is installed and accessible in your system's PATH. This is necessary for PDF conversion with `pdfkit`.
+To deploy this app on Streamlit Cloud:
 
-## Usage Guide
+    Ensure your project is pushed to your GitHub repository.
+    Go to Streamlit Cloud and create a new app.
+    Select your GitHub repository and configure the deployment settings.
+    Deploy the app, and Streamlit Cloud will provide a URL where your app is accessible.
 
-1. Run the Streamlit app:
+Usage
+Reading the Book
 
-    ```bash
-    streamlit run app.py
-    ```
+    Open the app in your browser.
+    The left side of the interface will display the PDF viewer with the textbook.
+    Scroll through and read the content as needed.
 
-2. Input your OpenAI API key in the provided sidebar field.
-3. Optionally, scrape web content and convert it to a PDF for the AI to use as context.
-4. Upload any documents you want the AI to reference during the conversation.
-5. Initiate the chat by clicking "Start Chat" and begin your conversation with the AI.
+Asking Questions
 
-## Application Notes
+    On the right side of the interface, you will find the AI tutor chat window.
+    Type your question related to the textbook content.
+    The AI tutor will respond with context-aware answers, helping you understand the material better.
 
-- Always ensure you have the right to scrape content from websites and to use any uploaded documents.
-- The chat interface activates after the "Start Chat" button is clicked, and the uploaded files are processed.
+Example Questions
 
-## Contributing
+    "Can you explain how TCP congestion control works?"
+    "What is the difference between IPv4 and IPv6?"
+    "How does DNS resolve domain names?"
 
-If you'd like to contribute to the project, please fork the repository and issue a pull request with your suggested changes.
+Technologies Used
 
-## License
+    Streamlit: The main framework for building the web application.
+    OpenAI's Assistants API: For creating a custom AI tutor with memory capabilities.
+    Python: The programming language used to build the app.
+    Google Drive: Used to host and embed the PDF version of the textbook.
 
-This project is licensed under the [MIT License](LICENSE.md).
+Contributing
 
----
+Contributions to the project are welcome! Feel free to submit issues or pull requests to improve the app.
+Steps to Contribute
 
-The inline comments in the source code provide further details and can guide you through the application's functionality and structure.
+    Fork the repository.
+    Create a new branch for your feature or bugfix.
+    Commit your changes and push the branch to your fork.
+    Submit a pull request describing your changes.
+
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+Acknowledgments
+
+    James Kurose and Keith Ross: For writing the "Computer Networking: A Top-Down Approach", the textbook that this AI tutor is based on.
+    OpenAI: For providing the powerful API that powers the AI tutor.
+    Streamlit: For making web app deployment easy and accessible.
+
