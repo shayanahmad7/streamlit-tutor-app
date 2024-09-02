@@ -33,21 +33,21 @@ Clone the Repository
 ```bash
 git clone https://github.com/shayanahmad7/streamlit-tutor-app.git
 cd streamlit-tutor-app
-
+```
 Install Dependencies
 
 Make sure you have the necessary dependencies installed. You can do this using pip:
 
 ```bash
 pip install -r requirements.txt
-
+```
 Running the App Locally
 
 To run the Streamlit app locally, use the following command:
 
 ```bash
 streamlit run app.py
-
+```
 
 This will start a local server where you can interact with the AI Tutor.
 Deploying on Streamlit Cloud
